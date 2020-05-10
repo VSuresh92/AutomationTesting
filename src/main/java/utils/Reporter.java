@@ -7,57 +7,58 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public abstract class Reporter {
+
 	public ExtentTest test;
 	public static ExtentReports extent;
 	public String testCaseName, testDescription, category, authors;
+	public String reportName = "EvidenceReport";
 
-	
 	public void reportStep(String desc, String status) {
 
 		long snapNumber = 100000l;
-		
+
 		try {
-			snapNumber= takeSnap();
+			snapNumber = takeSnap();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		// Write if it is successful or failure or information
-		if(status.toUpperCase().equals("PASS")){
-			test.log(LogStatus.PASS, desc+test.
-					addScreenCapture("./../reports/images/"+snapNumber+".jpg"));
-		}else if(status.toUpperCase().equals("FAIL")){
-			test.log(LogStatus.FAIL, desc+test.addScreenCapture("./../reports/images/"+snapNumber+".jpg"));
+		if (status.toUpperCase().equals("PASS")) {
+
+			test.log(LogStatus.PASS, desc + test.addScreenCapture("./../reports/images/" + snapNumber + ".jpg"));
+
+		} else if (status.toUpperCase().equals("FAIL")) {
+
+			test.log(LogStatus.FAIL, desc + test.addScreenCapture("./../reports/images/" + snapNumber + ".jpg"));
+
 			throw new RuntimeException("FAILED");
-		}else if(status.toUpperCase().equals("INFO")){
+		} else if (status.toUpperCase().equals("INFO")) {
 			test.log(LogStatus.INFO, desc);
-		}else if(status.toUpperCase().equals("WARN")){
-			test.log(LogStatus.WARNING, desc+test.addScreenCapture("./../reports/images/"+snapNumber+".jpg"));
+		} else if (status.toUpperCase().equals("WARN")) {
+			test.log(LogStatus.WARNING, desc + test.addScreenCapture("./../reports/images/" + snapNumber + ".jpg"));
 		}
 	}
 
 	public abstract long takeSnap();
-	
 
-	public ExtentReports startResult(){
+	public ExtentReports startResult() {
 		extent = new ExtentReports("./reports/result.html", false);
-		extent.loadConfig(new File("./src/main/resources/extent-config.xml"));
+		extent.loadConfig(new File("./src/test/resources/extent-config.xml"));
 		return extent;
 	}
 
-	public ExtentTest startTestCase(String testCaseName, String testDescription){
+	public ExtentTest startTestCase(String testCaseName, String testDescription) {
 		test = extent.startTest(testCaseName, testDescription);
 		return test;
 	}
 
-	public void endResult(){		
+	public void endResult() {
 		extent.flush();
 	}
 
-	public void endTestcase(){
+	public void endTestcase() {
 		extent.endTest(test);
 	}
 
-	
-	
 }
