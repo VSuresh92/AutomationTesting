@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">124</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">restTests.TC_APT_001</td><td><a href="#m0">getResponseResults</a></td><td rowspan="1">1601707831096</td><td rowspan="1">31</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">restTests.TC_APT_001#getResponseResults</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: groovy/lang/GroovyObject
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at io.restassured.RestAssured.&lt;clinit&gt;(RestAssured.java:354)
+	at restTests.TC_APT_001.getResponseResults(TC_APT_001.java:17)
+Caused by: java.lang.ClassNotFoundException: groovy.lang.GroovyObject
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:371)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 42 more
+Caused by: java.util.zip.ZipException: invalid LOC header (bad signature)
+	at java.util.zip.ZipFile.read(Native Method)
+	at java.util.zip.ZipFile.access$1400(ZipFile.java:60)
+	at java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:734)
+	at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:434)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	at java.util.jar.Manifest$FastInputStream.fill(Manifest.java:476)
+	at java.util.jar.Manifest$FastInputStream.readLine(Manifest.java:410)
+	at java.util.jar.Manifest$FastInputStream.readLine(Manifest.java:444)
+	at java.util.jar.Attributes.read(Attributes.java:376)
+	at java.util.jar.Manifest.read(Manifest.java:234)
+	at java.util.jar.Manifest.&lt;init&gt;(Manifest.java:81)
+	at java.util.jar.Manifest.&lt;init&gt;(Manifest.java:73)
+	at java.util.jar.JarFile.getManifestFromReference(JarFile.java:200)
+	at java.util.jar.JarFile.getManifest(JarFile.java:181)
+	at sun.misc.URLClassPath$JarLoader$2.getManifest(URLClassPath.java:1012)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:451)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	... 48 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
