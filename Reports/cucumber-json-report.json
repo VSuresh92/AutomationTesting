@@ -1,0 +1,76 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-30T16:22:30.422Z",
+        "before": [
+          {
+            "result": {
+              "duration": 35951000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.SampleSteps.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify title of the google Page",
+        "description": "",
+        "id": "sample-automation-tests;verify-title-of-the-google-page",
+        "after": [
+          {
+            "result": {
+              "duration": 2662000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.SampleSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6934000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url is successfully launched",
+            "match": {
+              "location": "stepDefinitions.SampleSteps.url_is_successfully_launched()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 303000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify the title of the page \"Google\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Google",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.SampleSteps.verify_the_title_of_the_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Sample Automation Tests",
+    "description": "",
+    "id": "sample-automation-tests",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/features/SampleFeature.feature",
+    "tags": []
+  }
+]
