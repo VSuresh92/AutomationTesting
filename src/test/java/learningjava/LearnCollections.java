@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class LearnCollections implements Collection{
+public class LearnCollections implements Collection {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<String> list = new ArrayList<String>();
-		
+
 	}
 
 	@Override
@@ -17,12 +17,11 @@ public class LearnCollections implements Collection{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	public String add(String value) {
 		// TODO Auto-generated method stub
 		return value;
 	}
-
 
 	@Override
 	public boolean addAll(Collection arg0) {
@@ -33,7 +32,7 @@ public class LearnCollections implements Collection{
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
